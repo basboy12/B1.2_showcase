@@ -1,2 +1,2 @@
-CP_USER: "test"
-CP_PASSWORD: "test"
+CP_USER: <%= ENV["CP_USER"] %>
+CP_PASSWORD: <%= ENV["CP_PASSWORD"] %>

@@ -28061,3 +28061,18 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-08 20:02:37 +0200
+Processing by HomeController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"  ORDER BY "articles"."created_at" DESC[0m
+  Rendered layouts/_contact.html.haml (0.2ms)
+  Rendered home/index.html.haml within layouts/application (10.1ms)
+  Rendered layouts/_navigation.html.haml (0.4ms)
+Completed 200 OK in 47ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2016-04-08 20:02:37 +0200
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2016-04-08 20:02:37 +0200
