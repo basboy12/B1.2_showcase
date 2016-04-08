@@ -1,0 +1,19 @@
+%p#notice= notice
+
+.wrapper
+  .row
+    .col_4
+      %h2 All Articles I've written!
+
+  - @articles.each do |article|
+    .row
+      .col_4
+        = link_to article, :class => "article_wrapper" do
+          .col_1
+            = image_tag article.image.url(:medium)
+          .col_3
+            %h4= article.title
+            %p= article.content
+
+  -# = link_to 'Edit', edit_article_path(article)
+  -# = link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,0 +1,17 @@
+!!!
+%html{:lang => "en"}
+	%head
+		%meta{:charset => "UTF-8"}
+		%meta{:name => "viewport", :content => "initial-scale=1.0"}
+		%title B1.2 Showcase
+		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+		= csrf_meta_tags
+	%body
+		= render 'layouts/navigation'
+		= yield
+
+
+
+
+
+		= javascript_include_tag 'application', 'data-turbolinks-track' => true

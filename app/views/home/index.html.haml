@@ -1,0 +1,47 @@
+
+
+#page_content
+  %header.wrapper_extend
+    .skew
+
+  %section.intro
+    .wrapper
+      .row
+        .col_4
+          %h1 Hi there! My name is Bas van Straaten. <br> I'm a B1.1 student Industrial Design at Eindhoven University.
+          %h3 Please scroll down!
+          %img#scroll_icon{src: "#{gulp_asset_path('images/scroll.svg')}"}
+
+  %section.vision
+    <svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 1.025" style="enable-background:new 0 0 100 1.025;" xml:space="preserve">
+    <path class="st0" d="M0,50C0,22.386,22.386,0,50,0s50,22.386,50,50s-22.386,50-50,50S0,77.614,0,50z"/>
+    </svg>
+    .grey_box
+      .wrapper
+        .row
+          .col_4
+            %h2 Vision & Professional Identity
+            %p Ever since I was a little kid, I liked to build, draw and handcraft things. It started simple with building small tree houses and crafting little objects. When I was about ten years old, I started to build, shape and paint more advanced model cars. Finally, during the last three years in secondary school, I started to develop a great interest for new, innovative technologies and product design. I started to experiment with 3D-printing and microcontrollers, which resulted in making an electronic music instrument.
+
+            %p have gained a lot of experience and interest during the times of building and crafting on various projects, and as a result I developed a great strength in coming up with many ideas and sketching them, programming with Arduino and building high-fidelity prototypes with exotic materials. Skills which will definitely give me a big advantage at Industrial Design.
+
+            %p Our current society seems to individualize. People are getting more and more connected with their smartphones and live their life to meet the expectations set by others and the commercialized world. Instead of truly experiencing the moment, we are focusing to much on trying to capture the perfect shot to be shared on social media. I think that as a society we should refocus and go back to the basics of life. We should focus on things and activities that make us feel happy and possionate about them at the moment of use, not after validations by others.
+
+  %section#articles
+    .wrapper
+      - @articles.each do |article|
+        .row
+          .col_4
+            = link_to article, :class => "article_wrapper" do
+              .col_1
+                = image_tag article.image.url(:medium)
+              .col_3
+                %h4= article.title
+                %p= article.content
+
+
+
+  = render 'layouts/contact'
+
+
+  .bottom_rect
