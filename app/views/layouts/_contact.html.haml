@@ -6,14 +6,10 @@
     .row
       .col_1
       .col_2
-
-
-
-
-
-      -#   %form#contact
-      -#     %input{type: "name", placeholder: "First Name"}
-      -#     %input{type: "email", placeholder: "Email"}
-      -#     %textarea{type: "text", placeholder: "Your awesome message"}
-      -#     %input{type: "submit", value: "Submit" }
-      -# .col_1
+        = form_for @contact do |f|
+          = f.text_field :name, required: true, placeholder: 'First Name'
+          = f.text_field :email, required: true, placeholder: 'Email'
+          = f.text_area :message, required: true, placeholder: 'Your awesome message!'
+          = f.text_field :nickname, class: 'hidden'
+          = f.submit 'Submit'
+      .col_1
