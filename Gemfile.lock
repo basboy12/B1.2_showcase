@@ -85,6 +85,7 @@ GEM
       mime-types
       mimemagic (= 0.3.0)
     pg (0.18.1)
+    puma (2.15.3)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -156,6 +157,7 @@ DEPENDENCIES
   mail_form
   paperclip (~> 4.3.1)
   pg
+  puma
   rails (= 4.2.0)
   rails_12factor
   sass-rails (~> 5.0)
