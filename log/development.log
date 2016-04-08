@@ -27976,3 +27976,32 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-08 19:33:37 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-08 19:33:37 +0200
+
+
+Started GET "/articles" for 127.0.0.1 at 2016-04-08 19:40:19 +0200
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"  ORDER BY "articles"."created_at" DESC
+  Rendered articles/index.html.haml within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.haml (0.4ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-08 19:40:19 +0200
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2016-04-08 19:40:19 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-08 19:40:19 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-08 19:40:19 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-08 19:40:19 +0200
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2016-04-08 19:40:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-08 19:40:19 +0200
