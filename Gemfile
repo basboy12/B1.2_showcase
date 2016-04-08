@@ -1,12 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.1'
-<<<<<<< HEAD
 gem 'puma'
-=======
-
-# gem 'puma', group: :production
->>>>>>> origin/master
 
 gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 5.0'
