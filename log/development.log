@@ -46521,3 +46521,30 @@ Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2016-05-02 19:03:13 +020
 
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-02 19:03:13 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-02 19:04:21 +0200
+Processing by LandingpageController#index as HTML
+  Rendered landingpage/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2016-05-02 19:04:21 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-05-02 19:04:21 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-05-02 19:04:21 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-05-02 19:04:21 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-05-02 19:04:21 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-05-02 19:04:21 +0200
+
+
+Started GET "/assets/global.js?body=1" for 127.0.0.1 at 2016-05-02 19:04:21 +0200
