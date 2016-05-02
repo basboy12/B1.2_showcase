@@ -7,7 +7,7 @@
       .col_1
       .col_2
         = form_for @contact do |f|
-          = f.text_field :name, required: true, placeholder: 'First Name'
+          = f.text_field :name, required: true, placeholder: 'Name'
           = f.text_field :email, required: true, placeholder: 'Email'
           = f.text_area :message, required: true, placeholder: 'Your awesome message!'
           = f.text_field :nickname, class: 'hidden'

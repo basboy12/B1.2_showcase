@@ -5,11 +5,13 @@
 		%meta{:name => "viewport", :content => "initial-scale=1.0"}
 		%meta{:name => "description", :content => "Hi, my name is Bas van Straaten and this is my Showcase for B1.2 Industrial Design at University of Eindhoven"}
 		%title Bas van Straaten - Showcase B1.2
+		%link{:href => "https://fonts.googleapis.com/css?family=Roboto:400,300,500,700", :rel => "stylesheet", :type => "text/css"}
 		= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
 		= csrf_meta_tags
 	%body
-		= render 'layouts/navigation'
 		= yield
+
+
 
 
 

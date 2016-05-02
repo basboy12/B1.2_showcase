@@ -1,0 +1,116 @@
+#public_page
+  %input#sidebar_toggler{type: "checkbox"}
+  %label#hamburger_button{for: "sidebar_toggler"}
+    %span.nav_ham_bar
+    %span.nav_ham_bar
+    %span.nav_ham_bar
+
+  .sidebar
+    %label#close_button{for: "sidebar_toggler"}
+      <svg id="close_button" viewBox= "0 0 30px 30px"> <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+      </svg>
+    %ul
+      %li <a href="#home"> Home </a>
+      %li <a href="#about"> About </a>
+      %li <a href="#work"> Work </a>
+      //%li <a href="#articles"> Articles </a>
+      %li <a href="#contact"> Contact </a>
+      %li= link_to "Showcase", showcase_path, target: "_blank"
+
+  #page_content
+    %section#home
+      .wrapper.flex
+        #headline_wrapper
+          %h1 BAS VAN STRAATEN
+          %h2 B1.2 INDUSTRIAL DESIGN
+      %img{src: "#{gulp_asset_path('images/arrow.svg')}", class: "arrow", alt: ""}
+    %section#about
+      .wrapper
+        %h3 Who Am I?
+        %p Hello there, my name is Bas van Straaten. I am a Dutch boy, currently studying Industrial Design at Eindhoven University, where I am expanding my skills and view on the world.
+        %p Are you interested in following my path during the coming years? List your email down below and I will keep you up to date every now and then. Are you interested in seeing my improvements over the last school year? Then click <a class="link" target="_blank" href="http://basvanstraaten.com">here</a> to visit my Showcase.
+        %form
+          %input{type: "Name", placeholder: "First Name"}
+          %input{type: "Email", placeholder: "Email Address"}
+          %input{type: "Submit", value: "Submit"}
+        %p.strong.center Please do continue scrolling down, where you will find my best work and recent articles I have written.
+
+        %img{src: "#{gulp_asset_path('images/arrow.svg')}", class: "arrow", alt: ""}
+    %section#work
+      .wrapper
+        %h3 Work
+        %p Here I showcase my best work and projects I have completed during my study at Industrial Design, both curriculair and extra curriculair. Click on a project to see the full details!
+      .extended_wrapper
+        .row
+          .project_wrapper
+            = link_to "#", class: "project_cover" do
+              .text_wrapper
+                %h6 Milano Design Week
+                %p Ask the Designer
+            .tag_wrapper
+              .tag Design
+              .tag Product
+              .tag Lifestyle
+            %img{src: "#{gulp_asset_path('images/1.jpg')}"}
+          .project_wrapper
+            = link_to "#", class: "project_cover" do
+              .text_wrapper
+                %h6 Milano Design Week
+                %p Ask the Engineer
+            %img{src: "#{gulp_asset_path('images/2.jpg')}"}
+          .project_wrapper
+            = link_to "#", class: "project_cover" do
+              .text_wrapper
+                %h6 Milano Design Week
+                %p Ask the Designer
+            %img{src: "#{gulp_asset_path('images/3.jpg')}"}
+          .project_wrapper
+            = link_to "#", class: "project_cover" do
+              .text_wrapper
+                %h6 Milano Design Week
+                %p Ask the Designer
+            %img{src: "#{gulp_asset_path('images/4.jpg')}"}
+        .row
+          .project_wrapper
+            = link_to "#", class: "project_cover" do
+              .text_wrapper
+                %h6 Creative Programming
+                %p Vector Art Using Processing
+            %img{src: "#{gulp_asset_path('images/5.pdf')}"}
+          .project_wrapper
+            = link_to "#", class: "project_cover" do
+              .text_wrapper
+                %h6 Basic Formgiving Skills
+                %p Form Integration
+            %img{src: "#{gulp_asset_path('images/6.jpg')}"}
+          .project_wrapper
+            = link_to "#", class: "project_cover" do
+              .text_wrapper
+                %h6 Basic Formgiving Skills
+                %p Form Integration
+            %img{src: "#{gulp_asset_path('images/7.jpg')}"}
+          .project_wrapper
+            = link_to "#", class: "project_cover" do
+              .text_wrapper
+                %h6 Basic Formgiving Skills
+                %p Remodel an Power Outlet
+            %img{src: "#{gulp_asset_path('images/8.jpg')}"}
+
+        %img{src: "#{gulp_asset_path('images/arrow.svg')}", class: "arrow", alt: ""}
+
+    -# %section#articles
+      .wrapper
+        %h3 Articles
+        %p Lately I've been discovering the world of writting. In these 5 minute read articles I share my view on the world, give helpful tips and share free resources now and then!
+        %img{src: "#{gulp_asset_path('images/arrow.svg')}", class: "arrow", alt: ""}
+
+    %section#contact
+      .wrapper
+        %h3 Contact
+        %p Is there something you would like to say? Do you want more information about a certain project? Or do you just want to drop a line? Feel free to send me anything you wish to say!
+        %form
+          %textarea{type: "text", placeholder: "What's on your mind today?"}
+          %input{type: "Name", placeholder: "Full Name"}
+          %input{type: "Email", placeholder: "Email Address"}
+          %input{type: "hidden", value: "hidden", class: "hidden"}
+          %input{type: "Submit", value: "Submit"}

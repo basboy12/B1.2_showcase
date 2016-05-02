@@ -1,0 +1,392 @@
+#public_page
+
+  $dark_grey: #333
+
+  #hamburger_button
+    position: fixed
+    top: 20px
+    left: 20px
+    width: 25px
+    height: 18px
+    display: block
+    z-index: 10
+    &:hover
+      cursor: pointer
+    @media only screen and (min-width: 600px)
+      top: 50px
+      left: 50px
+    .nav_ham_bar
+      height: 2px
+      width: 100%
+      content: ""
+      display: block
+      margin-bottom: 6px
+      background-color: #333
+      &:last-child
+        margin: 0
+
+  #sidebar_toggler
+    display: none
+    margin: 0
+    &:checked ~ .sidebar
+      left: 0px
+      box-shadow: 0 0 15px 5px rgba(black, 0.25)
+    &:checked ~ #page_content
+      @media only screen and (min-width: 1340px)
+        margin-left: 300px
+
+
+  #page_content
+    transition: .3s ease-out
+
+  .sidebar
+    position: fixed
+    top: 0px
+    left: -300px
+    bottom: 0px
+    width: 300px
+    background-color: #333
+    z-index: 10
+    color: white
+    transition: .3s ease-out
+    padding: 50px 0 50px 50px
+    #close_button
+      fill: white
+      width: 25px
+      height: 25px
+      z-index: 40
+      &:hover
+        cursor: pointer
+        fill: darken(#dceded, 40)
+    ul
+      margin-top: 50px
+      li
+        padding: 30px 0
+        &:last-child
+          padding-top: 75px
+          a:hover
+            color: rgb(255, 0, 91)
+          a:after
+            background-color: rgb(255, 0, 91)
+        a
+          transition: 0.2s ease-out
+          font-size: 1rem
+          position: absolute
+          font-weight: 400
+          color: white
+          &:hover
+            //color: darken(#dceded, 40)
+          &:hover:after, &.active:after
+            width: 100%
+          &:after
+            transition: 0.4s ease-out
+            content: ""
+            display: block
+            position: relative
+            left: 0
+            right: 0
+            width: 0
+            bottom: -4px
+            height: 2px
+            background-color: white
+
+
+  %clearfix
+    *zoom: 1
+    &:before,
+    &:after
+      content: " "
+      display: table
+    &:after
+      clear: both
+
+  section, .wrapper, .extended_wrapper, .row
+    @extend %clearfix
+
+
+  #work
+    background-image: url('images/section_2.png')
+    p
+      margin-bottom: 75px
+    .tag_wrapper
+      position: absolute
+      opacity: 0
+      transition: 0.1s
+      right: 0
+      left: 0
+      bottom: 0
+      border-radius: 5px
+      z-index: 40
+      margin: 4px
+      .tag
+        color: rgba(white, .8)
+        font-size: 14px
+        background-color: rgba(darken(#dceded, 40), 0.3)
+        display: inline-block
+        float: left
+        font-weight: 400
+        border-radius: 2.5px
+        letter-spacing: 0.01em
+        padding: 4px 6px 4px
+        margin: 2px
+        z-index: 40
+    background-color: darken(#dceded, 4)
+    .project_cover
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      border-radius: 5px
+      background-color: rgba(black, 0.6)
+      display: flex
+      justify-content: center
+      align-items: center
+      color: white
+      padding: 10px
+      overflow: hidden
+      margin: 0
+      transition: .20s ease-out
+      opacity: 0
+      z-index: 10
+      .text_wrapper
+        width: 100%
+        text-align: center
+        h6
+          width: 100%
+          margin: 0
+          font-size: 1.1rem
+          font-weight: 500
+          line-height: 1.25em
+        p
+          width: 100%
+          margin: 0
+          font-size: 0.85rem
+          text-align: inherit
+          line-height: 1.5em
+
+    .project_wrapper:hover img
+      transform: scale(1.015)
+    .project_wrapper:hover .project_cover, .project_wrapper:hover .tag_wrapper
+      opacity: 1
+    .project_wrapper
+      cursor: pointer
+      position: relative
+      width: 100%
+      margin-bottom: 20px
+      float: left
+      height: 0
+      padding-bottom: 100%
+      border-radius: 5px
+      background-color: #daeaea
+      transition: 0.2s ease-out
+      box-shadow: 0 0 10px 1px rgba(black, 0.025)
+      box-sizing: content-box
+      overflow: hidden
+      &:hover
+        background-color: darken(#daeaea,10)
+      @media only screen and (min-width: 500px)
+        width: 48%
+        padding-bottom: 48%
+        margin: 1%
+      @media only screen and (min-width: 800px)
+        box-sizing: content-box
+        width: 24%
+        padding-bottom: 24%
+        margin: .5%
+      img
+        overflow: hidden
+        border-radius: 5px
+        display: block
+        width: 100%
+        height: 100%
+        transform: scale(1)
+        transition: .2s ease-out
+        index: 1
+        object-fit: cover
+
+
+  section
+    width: 100%
+    background:
+      size: cover
+      repeat: no-repeat
+    .wrapper, .extended_wrapper
+      max-width: 500px
+      margin: 0 auto
+      box-sizing: content-box
+      padding: 0 20px
+    .extended_wrapper
+      max-width: 1000px
+    nav
+      padding-top: 80px
+      ul
+        display: flex
+        padding: 0 50px
+        justify-content: space-between
+        li
+          display: inline-block
+          a
+            font-size: 0.875rem
+            font-weight: 400
+            letter-spacing: 0.04em
+            color: $dark_grey
+            position: absolute
+          a:after
+            transition: 0.5s ease-out
+            opacity: 0
+          a:hover:after, a.active:after
+            opacity: 1
+            display: block
+            content: ""
+            width: 100%
+            height: 1px
+            background-color: #333
+            position: relative
+            bottom: -4px
+            left: 0
+            right: 0
+
+  .arrow
+    display: block
+    margin: 0 auto
+    width: 20px
+    height: auto !important;
+    padding: 100px 0 75px
+  .link
+    color: black
+    font-weight: 400
+
+  #nav
+    position: fixed
+    right: 0
+    height: 250px
+    margin-top: 450px
+    padding-right: 20px
+    li
+      display: block
+      margin-bottom: 20px
+      text-align: right
+      a
+        font-size: 0.875rem
+        font-weight: 400
+        letter-spacing: 0.04em
+        color: $dark_grey
+
+  #home
+    //margin-top: -50px
+    height: 100vh
+    min-height: 600px
+    background:
+      image: url('images/section_0.png')
+      size: cover
+      repeat: no-repeat
+    .arrow
+      padding: 0
+      margin-bottom: 75px
+    .flex
+      height: calc(100% - 95px)
+      width: 100%
+      padding: 0
+      display: flex
+      align-items: center
+      jusitify-content: center
+      #headline_wrapper
+        margin-top: 150px
+        text-align: center
+        flex: 1
+        width: 100%
+        h1
+          font-size: 1.5rem
+          letter-spacing: 0.04em
+          line-height: 1.5em
+          font-weight: 500
+        h2
+          font-size: 1.2rem
+          letter-spacing: 0.04em
+          font-weight: 400
+
+  h3
+    text-align: center
+    font-size: 1.5rem
+    font-weight: 500
+    letter-spacing: 0.04em
+    padding: 125px 0 50px 0
+  p
+    text-align: justify
+    line-height: 1.85rem
+    margin-bottom: 50px
+
+
+
+  .hidden
+    display: none
+
+  #about
+    background-color: #dceded
+    background-image: url('images/section_1.png')
+  form
+    display: inline-block
+    width: 100%
+    padding-top: 25px
+    margin-bottom: 75px
+    input, textarea
+      display: block
+      width: 100%
+      height: 50px
+      border: 1px solid lighten(#c7d6d6, 5)
+      border-radius: 5px
+      font-weight: 300
+      margin-bottom: 10px
+      background-color: #c7d6d6
+      background-color: lighten(#dceded, 6)
+      font-size: 1rem
+      font-family: inherit
+      padding: 0 15px
+      color: #333
+      letter-spacing: 0.04em
+      transition: 0.6s ease-out
+      appearance: none
+      &[type="Email"]
+        width: calc(75% - 10px)
+        float: left
+      &[type="submit"]
+        width: 25%
+        padding: 0
+        float: right
+        font-weight: 500
+        color: white
+        background-color: darken(#c7d6d6, 20)
+        &:hover
+          background-color: darken(#c7d6d6, 40)
+
+
+  .strong
+    font-weight: 400
+    margin-bottom: 0
+  .center
+    text-align: center
+
+
+  #articles
+    background-color: darken(#dceded, 8)
+  #contact
+    background-image: url('images/section_3.png')
+    p
+      margin-bottom: 25px
+    form
+      padding-bottom: 0px
+      textarea, input
+        background-color: lighten(#dceded, 4)
+        color: #333
+        &[type="submit"]
+          background-color: darken(#c7d6d6, 20)
+          color: white
+          &:hover
+            background-color: darken(#c7d6d6, 40)
+      textarea
+        line-height: 1.5em
+        height: 250px
+        padding: 15px
+        max-width: 100%
+        min-width: 100%
